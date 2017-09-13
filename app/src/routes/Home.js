@@ -8,8 +8,10 @@ export default class Home extends React.Component {
 
 	render(){
 		return(
-			<h1>Hola</h1>
-			<Link to="store"></Link>
+			<div>
+				<h1>Hola</h1>
+				<Link to="store">To store</Link>
+			</div>
 			)
 	}
 }
