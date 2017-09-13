@@ -1,9 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { Router, Route, IndexRouter, hashHistory} from 'react-router'
 
-import Home from './routes/Home.js'
-import Store from './routes/Store.js'
+import FilterableProductTable from '../components/FilterableProductTable.js'
 
 let db = [
 	{category: "Sporting Goods", price: "$49.99", stocked: true, name:"Football"},
@@ -14,5 +11,12 @@ let db = [
 	{category: "Electronics", price: "$199.99", stocked: true, name:"Nexus 7"},
 ]
 
-const app = document.getElementById('app')
-ReactDOM.render(<FilterableProductTable store={ db }/>, app)
+export default class Store extends React.Component {
+	constructor(){
+		super()
+	}
+
+	render(){
+		return(<FilterableProductTable store={db}/>)
+	}
+}
